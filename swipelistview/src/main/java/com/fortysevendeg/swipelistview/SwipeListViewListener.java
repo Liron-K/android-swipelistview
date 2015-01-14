@@ -117,4 +117,9 @@ public interface SwipeListViewListener {
      */
     void onLastListItem();
 
+    boolean hasDynamicOffsets();
+
+    float leftOffsetDynamic(int position);
+
+    float rightOffsetDynamic(int position);
 }

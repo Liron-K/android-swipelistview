@@ -61,4 +61,15 @@ public class BaseSwipeListViewListener implements SwipeListViewListener {
     @Override
     public void onLastListItem() {
     }
+
+    public boolean hasDynamicOffsets() {
+        return false;
+    }
+
+    public float leftOffsetDynamic(int position) {
+        return 0;
+    }
+    public float rightOffsetDynamic(int position) {
+        return 0;
+    }
 }

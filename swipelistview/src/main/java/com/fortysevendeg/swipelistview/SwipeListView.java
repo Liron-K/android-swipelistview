@@ -361,8 +361,8 @@ public class SwipeListView extends ListView {
      *
      * @param position Position that you want open
      */
-    public void closeAnimate(int position) {
-        touchListener.closeAnimate(position);
+    public void closeAnimate(int position, boolean reset) {
+        touchListener.closeAnimate(position, reset);
     }
 
     /**
@@ -703,4 +703,23 @@ public class SwipeListView extends ListView {
         touchListener.closeOpenedItems();
     }
 
+    public boolean hasDynamicOffsets() {
+        if (swipeListViewListener != null) {
+            return swipeListViewListener.hasDynamicOffsets();
+        }
+        return false;
+    }
+
+    public float leftOffsetDynamic(int position) {
+        if (swipeListViewListener != null) {
+          return swipeListViewListener.leftOffsetDynamic(position);
+        }
+        return 0;
+    }
+    public float rightOffsetDynamic(int position) {
+        if (swipeListViewListener != null) {
+            return swipeListViewListener.rightOffsetDynamic(position);
+        }
+        return 0;
+    }
 }
