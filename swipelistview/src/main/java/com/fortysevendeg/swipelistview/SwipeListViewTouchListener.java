@@ -815,7 +815,7 @@ public class SwipeListViewTouchListener implements View.OnTouchListener {
                 view.onTouchEvent(motionEvent);
                 return true;
             }
-
+            case MotionEvent.ACTION_CANCEL:
             case MotionEvent.ACTION_UP: {
                 if (velocityTracker == null || !swiping || downPosition == ListView.INVALID_POSITION) {
                     break;
